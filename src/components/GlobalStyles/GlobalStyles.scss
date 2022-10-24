@@ -3,9 +3,22 @@
 
 :root {
   --primary: #fe2c55;
+  --black: #000;
+  --colorTextPrimary: rgba(22, 24, 35, 1);
+  --colorTextSecondary: rgba(22, 24, 35, 0.75);
+  --colorTextTertiary: rgba(22, 24, 35, 0.5);
+  --colorTextQuaternary: rgba(22, 24, 35, 0.34);
+  --colorBGPlaceholderDefault: rgba(22, 24, 35, 0.06);
+  --colorBGView: rgba(22, 24, 35, 0.03);
+
+  //DefaultLayout
+  --default-layout-header-height: 60px;
+  --default-layout-width: 1150px;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -18,4 +31,16 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
+}
+
+button,
+input,
+[tabindex] {
+  outline: none;
+  border: none;
+}
+
+a[href] {
+  color: var(--text-color);
+  text-decoration: none;
 }
