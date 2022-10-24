@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCircleXmark,
   faMagnifyingGlass,
+  faPlus,
   faSpinner,
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
@@ -12,6 +13,7 @@ import classNames from 'classnames/bind';
 import images from '~/assets/images';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
+import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
 
@@ -57,7 +59,12 @@ function Heder() {
           </div>
         </Tippy>
 
-        <div className={cx('actions')}></div>
+        <div className={cx('actions')}>
+          <Button basic noRadius leftIcon={<FontAwesomeIcon icon={faPlus} />}>
+            Upload
+          </Button>
+          <Button primary>Log in</Button>
+        </div>
       </div>
     </header>
   );
